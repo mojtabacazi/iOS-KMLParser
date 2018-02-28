@@ -1,5 +1,5 @@
 # iOS-KMLParser
-KMLParser for Apple MapKit.
+KMLParser for MapKit.
 
 Based on [Apple's KMLViewer](https://developer.apple.com/library/content/samplecode/KMLViewer/Introduction/Intro.html#//apple_ref/doc/uid/DTS40010046-Intro-DontLinkElementID_2) sample code with partial support for Multigeometry.
 
@@ -27,8 +27,6 @@ Sample Usage:
     
     // Add all of the MKOverlay objects parsed from the KML file to the map.
     NSArray *overlays = [self.kmlParser overlays];
-    NSLog(@"lat %f", [(id<MKOverlay>)overlays[0] coordinate].latitude);
-    NSLog(@"lon %f", [(id<MKOverlay>)overlays[0] coordinate].longitude);
     [self.map addOverlays:overlays];
     
     // Add all of the MKAnnotation objects parsed from the KML file to the map.
